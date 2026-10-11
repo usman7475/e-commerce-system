@@ -1,0 +1,325 @@
+   :root {
+     --primary-color: #d35400;
+     --secondary-color: #e67e22;
+     --light-color: #fef5eb;
+     --dark-color: #3d2b1f;
+     --accent-color: #c0392b;
+   }
+
+   body {
+     font-family: 'Poppins', sans-serif;
+     background-color: var(--light-color);
+     color: var(--dark-color);
+   }
+
+   /* Header Styles */
+   .hero-section {
+     position: relative;
+     overflow: hidden;
+     margin-bottom: 30px;
+   }
+
+   .carousel-item img {
+     height: 500px;
+     object-fit: cover;
+     object-position: center;
+   }
+
+   .hero-text {
+     position: absolute;
+     bottom: 50px;
+     left: 50px;
+     background: rgba(0, 0, 0, 0.6);
+     color: white;
+     padding: 20px;
+     border-radius: 10px;
+     max-width: 500px;
+   }
+
+   .hero-text h2 {
+     font-size: 2.5rem;
+     margin-bottom: 10px;
+     color: var(--secondary-color);
+   }
+
+   /* Category Sidebar */
+   .category-sidebar {
+     background-color: white;
+     border-radius: 10px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     height: 100%;
+   }
+
+   .category-sidebar {
+     color: var(--primary-color);
+     border-bottom: 2px solid var(--primary-color);
+     padding-bottom: 10px;
+     margin-bottom: 20px;
+   }
+
+   .category-list {
+     list-style: none;
+     padding: 0;
+   }
+
+   .category-list li {
+     margin-bottom: 15px;
+   }
+
+   .category-list a {
+     color: var(--dark-color);
+     text-decoration: none;
+     font-weight: 500;
+     transition: all 0.3s ease;
+     display: block;
+     padding: 8px 15px;
+     border-radius: 5px;
+   }
+
+   .category-list a:hover {
+     background-color: var(--primary-color);
+     color: white;
+     transform: translateX(5px);
+   }
+
+   /* Product Cards */
+   .section-title {
+     text-align: center;
+     margin: 40px 0;
+     position: relative;
+   }
+
+   .section-title h2 {
+     display: inline-block;
+     background-color: var(--primary-color);
+     color: white;
+     padding: 10px 30px;
+     border-radius: 30px;
+     font-size: 1.8rem;
+   }
+
+   .product-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+     gap: 30px;
+     margin-bottom: 50px;
+   }
+
+   .product-card {
+     background: white;
+     border-radius: 10px;
+     overflow: hidden;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease;
+   }
+
+   .product-card:hover {
+     transform: translateY(-10px);
+   }
+
+   .product-img {
+     height: 200px;
+     width: 100%;
+     object-fit: cover;
+   }
+
+   .product-info {
+     padding: 20px;
+   }
+
+   .product-title {
+     font-size: 1.2rem;
+     margin-bottom: 10px;
+     color: var(--primary-color);
+   }
+
+   .product-category {
+     color: var(--secondary-color);
+     font-size: 0.9rem;
+     margin-bottom: 10px;
+     display: block;
+   }
+
+   .product-price {
+     font-weight: bold;
+     font-size: 1.3rem;
+     color: var(--accent-color);
+     margin-bottom: 15px;
+   }
+
+   .add-to-cart {
+     display: block;
+     width: 100%;
+     background-color: var(--primary-color);
+     color: white;
+     border: none;
+     padding: 10px;
+     border-radius: 5px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+   }
+
+   .add-to-cart:hover {
+     background-color: var(--accent-color);
+   }
+
+   /* Special Offers Banner */
+   .special-offers {
+     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+     color: white;
+     padding: 30px;
+     border-radius: 10px;
+     margin: 40px 0;
+     text-align: center;
+   }
+
+   .special-offers h3 {
+     font-size: 2rem;
+     margin-bottom: 20px;
+   }
+
+   .offer-text {
+     font-size: 1.2rem;
+     margin-bottom: 20px;
+   }
+
+   .offer-btn {
+     display: inline-block;
+     background-color: white;
+     color: var(--primary-color);
+     padding: 10px 30px;
+     border-radius: 30px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: all 0.3s ease;
+   }
+
+   .offer-btn:hover {
+     background-color: white;
+     color: var(--primary-color);
+     transform: scale(1.05);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+   }
+
+   /* Responsive Styles */
+   @media (max-width: 992px) {
+     .hero-text {
+       left: 20px;
+       bottom: 20px;
+       max-width: 80%;
+     }
+
+     .hero-text h2 {
+       font-size: 2rem;
+     }
+   }
+
+   @media (max-width: 768px) {
+     .carousel-item img {
+       height: 400px;
+     }
+
+     .product-grid {
+       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+     }
+   }
+
+   @media (max-width: 576px) {
+     .hero-text {
+       position: static;
+       max-width: 100%;
+       margin-top: 20px;
+     }
+
+     .carousel-item img {
+       height: 300px;
+     }
+
+     .section-title h2 {
+       font-size: 1.5rem;
+     }
+   }
+
+   .d {
+     display: inline-block;
+   }
+
+   .column {
+     float: left;
+     width: 20%;
+     margin-top: 100px;
+     margin-bottom: 30px;
+     padding: 0 8px;
+
+   }
+
+   .column a {
+     color: black !important;
+   }
+
+   .column :hover {
+     background-color: wheat;
+     text-decoration: none;
+   }
+
+   @media screen and (max-width: 650px) {
+     .column {
+       width: 100%;
+       display: block;
+     }
+   }
+
+   .card {
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+
+   }
+
+   .title {
+     color: rgb(255, 0, 126);
+
+   }
+
+   .name {
+     background-color: #f8f9fa;
+     color: var(--primary-color);
+
+     padding: 7px;
+     font-size: 30px;
+     font-weight: bold;
+   }
+
+   .button {
+     border: none;
+     outline: 0;
+     display: inline-block;
+     padding: 8px;
+     color: white;
+     background-color: #000;
+     text-align: center;
+     cursor: pointer;
+     width: 100%;
+   }
+
+   .button:hover {
+     background-color: rgb(255, 0, 126);
+   }
+
+   #navbartitle {
+     color: var(--primary-color);
+     font-size: 23px;
+     font-weight: bold;
+
+   }
+
+   .submit {
+     background-color: var(--primary-color);
+     color: white;
+   }
+
+   a:hover {
+     text-decoration: none;
+     color: inherit;
+   }

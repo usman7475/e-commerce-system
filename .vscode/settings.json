@@ -1,0 +1,9 @@
+{
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.validate.enable": true,
+    "html.validate.scripts": true,
+    "files.associations": {
+        "*.js": "javascript",
+        "*.html": "html"
+    }
+}
